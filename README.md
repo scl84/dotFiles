@@ -2,7 +2,7 @@
 
 Collection of Windows and Ubuntu WSL2 config files
 
-### Windows Terminal Preview
+## Windows Terminal Preview
 
 <dl>
   <dt><strong>Filename</strong></dt>
@@ -13,7 +13,7 @@ Collection of Windows and Ubuntu WSL2 config files
 
 ---
 
-### TMUX
+## TMUX
 
 <dl>
   <dt><strong>Filename</strong></dt>
@@ -22,7 +22,7 @@ Collection of Windows and Ubuntu WSL2 config files
   <dd>~/</dd>
 </dl>
 
-### Vim
+## Vim
 
 <dl>
   <dt><strong>Filename</strong></dt>
@@ -31,7 +31,7 @@ Collection of Windows and Ubuntu WSL2 config files
   <dd>~/</dd>
 </dl>
 
-### Git
+## Git
 
 <dl>
   <dt><strong>Filename</strong></dt>
