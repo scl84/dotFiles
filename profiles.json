@@ -1,0 +1,233 @@
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+    "initialCols": 160,
+    "initialRows": 50,
+    "profiles": [
+        {
+            "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+            "hidden": false,
+            "name": "Ubuntu",
+            "source": "Windows.Terminal.Wsl",
+            "padding": "6, 6, 6, 6",
+            "fontFace": "JetBrains Mono",
+            "fontSize": 11,
+            "colorScheme": "Dark+",
+            "historySize": 9001,
+            "snapOnInput": true,
+            "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+            "startingDirectory":"//wsl$/Ubuntu/home/seanl/",
+            "tabTitle": "Ubuntu",
+            "suppressApplicationTitle": true
+        },
+        {
+            // Make changes here to the powershell.exe profile
+            "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+            "name": "Windows PowerShell",
+            "commandline": "powershell.exe",
+            "hidden": false,
+            "padding": "6, 6, 6, 6",
+            "fontFace": "Fira Code",
+            "fontSize": 10,
+            "colorScheme": "Dark+",
+            "historySize": 9001,
+            "snapOnInput": true,
+            "startingDirectory": "E:\\Developer",
+            "tabTitle": "Powershell",
+            "suppressApplicationTitle": true
+        },
+        {
+            // Make changes here to the cmd.exe profile
+            "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+            "name": "cmd",
+            "commandline": "cmd.exe",
+            "hidden": false,
+            "padding": "6, 6, 6, 6",
+            "fontFace": "Fira Code",
+            "fontSize": 10,
+            "startingDirectory": "E:\\Developer",
+            "tabTitle": "CMD",
+            "suppressApplicationTitle": true
+        },
+        {
+            "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+            "hidden": true,
+            "name": "Azure Cloud Shell",
+            "source": "Windows.Terminal.Azure"
+        },
+        {
+            "guid": "{f6a62582-22e0-4e1c-869d-5517e14e94fe}",
+            "hidden": true,
+            "name": "Git Bash",
+            "commandline": "\"%PROGRAMFILES%\\git\\usr\\bin\\bash.exe\" -i -l",
+            "startingDirectory": "E:\\Developer",
+            "padding": "6, 6, 6, 6",
+            "fontFace": "Fira Code",
+            "fontSize": 10,
+            "colorScheme": "GitBash",
+            "historySize": 9001,
+            "snapOnInput": true,
+            "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico"
+        }
+    ],
+    // Add custom color schemes to this array
+    "schemes": [
+        {
+            "background": "#000000",
+            "black": "#0C0C0C",
+            "blue": "#6060ff",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cyan": "#3A96DD",
+            "foreground": "#bfbfbf",
+            "green": "#00a400",
+            "name": "GitBash",
+            "purple": "#bf00bf",
+            "red": "#bf0000",
+            "white": "#ffffff",
+            "yellow": "#bfbf00"
+        },
+        {
+            "name": "Dark+",
+            "black": "#000000",
+            "red": "#cd3131",
+            "green": "#0dbc79",
+            "yellow": "#e5e510",
+            "blue": "#2472c8",
+            "purple": "#bc3fbc",
+            "cyan": "#11a8cd",
+            "white": "#e5e5e5",
+            "brightBlack": "#666666",
+            "brightRed": "#f14c4c",
+            "brightGreen": "#23d18b",
+            "brightYellow": "#f5f543",
+            "brightBlue": "#3b8eea",
+            "brightPurple": "#d670d6",
+            "brightCyan": "#29b8db",
+            "brightWhite": "#e5e5e5",
+            "background": "#0e0e0e",
+            "foreground": "#cccccc"
+          }
+    ],
+    // Add any keybinding overrides to this array.
+    // To unbind a default keybinding, set the command to "unbound"
+    "keybindings": [
+        {
+            "command" : "copy",
+            "keys" : 
+            [
+                "ctrl+c"
+            ]
+        },
+        {
+            "command" : "paste",
+            "keys" : [
+                "ctrl+v"
+            ]
+        },
+        {
+            "command": "closeTab",
+            "keys": [
+                "ctrl+w"
+            ]
+        },
+        {
+            "command": "newTab",
+            "keys": [
+                "ctrl+t"
+            ]
+        },
+        {
+            "command": "splitHorizontal",
+            "keys": [
+                "alt+shift+v"
+            ]
+        },
+        {
+            "command": "splitVertical",
+            "keys": [
+                "alt+shift+h"
+            ]
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": [
+                "alt+down"
+            ]
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": [
+                "alt+left"
+            ]
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": [
+                "alt+right"
+            ]
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": [
+                "alt+up"
+            ]
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "down"
+            },
+            "keys": [
+                "alt+shift+down"
+            ]
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "keys": [
+                "alt+shift+left"
+            ]
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "right"
+            },
+            "keys": [
+                "alt+shift+right"
+            ]
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": [
+                "alt+shift+up"
+            ]
+        }
+    ]
+}
