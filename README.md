@@ -2,8 +2,6 @@
 
 Collection of Windows and Ubuntu WSL2 config files
 
-## Windows
-
 ### Windows Terminal Preview
 
 <dl>
@@ -14,8 +12,6 @@ Collection of Windows and Ubuntu WSL2 config files
 </dl>
 
 ---
-
-## WSL 2
 
 ### TMUX
 
