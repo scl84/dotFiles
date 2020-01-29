@@ -1,5 +1,5 @@
 = dotFiles
-:icons: font
+:note-caption: 🏴
 
 Collection of Windows and Ubuntu WSL2 config files
 
