@@ -1,0 +1,33 @@
+= dotFiles
+
+Collection of Windows and Ubuntu WSL2 config files
+
+== Windows Terminal Preview
+
+Filename::
+`profile.json`
+Location::
+`%USERPROFILE%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json`
+
+NOTE: Appx GUID subject to change
+
+== TMUX
+
+Filename::
+`.tumx.conf`
+Location::
+`~/`
+
+== Vim
+
+Filename::
+`.vimrc`
+Location::
+`~/`
+
+== Git
+
+Filename::
+`.gitconfig`
+Location::
+`~/`
