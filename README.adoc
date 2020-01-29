@@ -1,4 +1,5 @@
 = dotFiles
+:icons:
 
 Collection of Windows and Ubuntu WSL2 config files
 
