@@ -26,6 +26,12 @@ Filename::
 Location::
 `~/`
 
+== Neovim
+Filename::
+`init.vim`
+Location::
+`~/config/nvim`
+
 == Git
 
 Filename::
