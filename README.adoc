@@ -38,3 +38,16 @@ Filename::
 `.gitconfig`
 Location::
 `~/`
+
+== ZSH
+
+Filename::
+`.zshrc`
+Location::
+`~/`
+
+=== Additional instructions
+
+- Install Powerlevel10k and gitstatusd
+- Insteall zsh-autosuggestions and zsh-syntax-highlightin
+- Ensure `.cache/zsh` exists for dirstack
