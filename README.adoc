@@ -30,7 +30,7 @@ Location::
 Filename::
 `init.vim`
 Location::
-`~/config/nvim`
+`~/.config/nvim`
 
 == Git
 
