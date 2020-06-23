@@ -49,5 +49,5 @@ Location::
 === Additional instructions
 
 - Install Powerlevel10k and gitstatusd
-- Insteall zsh-autosuggestions and zsh-syntax-highlightin
+- Install zsh-autosuggestions and zsh-syntax-highlighting
 - Ensure `.cache/zsh` exists for dirstack
