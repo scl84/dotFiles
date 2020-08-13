@@ -1,12 +1,12 @@
 let mapleader=' '
 syntax on 
 set enc=utf-8
-let g:python3_host_prog='/usr/local/bin/python3'
+let g:python3_host_prog='/usr/bin/python3'
 
 set splitright splitbelow
 
 set number relativenumber
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 set mouse=a
 set guicursor=
 set ruler
@@ -49,12 +49,20 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 20
 let g:netrw_browse_split = 4
 
+" Asciidoctor settings
+let g:asciidoctor_executable = 'asciidoctor'
+let g:asciidoctor_pdf_executable = 'asciidoctor-pdf'
+let g:asciidoctor_fenced_languages = ['python', 'c', 'javascript', 'cpp']
+
 " Plugins
 call plug#begin()
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'habamax/vim-asciidoctor'
 call plug#end()
 
 " Theme
@@ -70,3 +78,16 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
+
+:nmap <leader>e :CocCommand explorer<CR>
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
