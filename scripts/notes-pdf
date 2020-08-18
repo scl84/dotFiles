@@ -1,0 +1,10 @@
+#!/bin/sh
+
+IN_FILE="$1"
+
+if [ $# -ne 1 ]; then
+	echo "Script requires one argument"
+	exit 1
+fi
+
+asciidoctor-pdf -r asciidoctor-mathematical -a pdf-themesdir=../conf -a pdf-theme=notes "$IN_FILE"
