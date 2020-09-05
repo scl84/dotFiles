@@ -1,3 +1,5 @@
+" WHICH-KEY SETTINGS "
+
 " Map leader to which_key
 nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
@@ -24,10 +26,11 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
-let g:which_key_map['e'] = [ ':Lex'                       , 'explorer' ]
+let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
+let g:which_key_map['H'] = [ ':History'                   , 'split right']
 
 " s is for search
 let g:which_key_map.s = {
@@ -66,4 +69,48 @@ let g:which_key_map.a = {
       \ 'o' : [':AsciidoctorOpenHTML'  , 'Open HTML'],
       \ }
 
+" b is for buffers
+let g:which_key_map.b = {
+      \ 'name' : '+buffers' ,
+      \ 'd' : [':bd'              , 'Delete buffer'],
+      \ 'n' : [':bnext'           , 'Next buffer'],
+      \ 'p' : [':bprev'           , 'Previous buffer'],
+      \ }
+
+" c is for coc/code
+let g:which_key_map.c = {
+      \ 'name' : '+code/coc' ,
+      \ 'f' : ['<Plug>(coc-format)'                  , 'Format'],
+      \ 'q' : ['<Plug>(coc-fix-current)'             , 'Quick fix'],
+      \ 'a' : ['<Plug>(coc-codeaction)'              , 'Code action'],
+      \ 's' : ['<Plug>(coc-codeaction-selected)'     , 'Code action selected'],
+      \ 'r' : ['<Plug>(coc-rename)'                  , 'Rename'],
+      \}
+
+" g is for git 
+let g:which_key_map.g = {
+      \ 'name' : '+git' ,
+      \ 'f' : ['<Plug>(signify-next-hunk)'  , 'Next change'],
+      \ 'b' : ['<Plug>(signify-prev-hunk)'  , 'Previous change'],
+      \ 'd' : [':Gdiffsplit'                , 'Diff'],
+      \ '%' : [':Git add %'                 , 'Add'],
+      \ '.' : [':Git add .'                 , 'Add all'],
+      \ 'c' : [':Gcommit'                , 'Commit'],
+      \ 'h' : [':Gclog'                     , 'History'],
+      \ 'l' : [':Git log'                   , 'Log'],
+      \ 's' : [':Gstatus'                   , 'Status'],
+      \ 'a' : [':Gblame'                    , 'Annotate'],
+      \ 'p' : [':Gpush'                     , 'Push'],
+      \ 'P' : [':Gpull'                     , 'Pull'],
+      \}
+
+" l is for latex
+let g:which_key_map.l = {
+      \ 'name' : '+latex' ,
+      \ 'c' : [':VimtexCompile'         , 'Compile'],
+      \ 'C' : [':VimtexClean'           , 'Clean'],
+      \ 'e' : [':VimtexErrors'          , 'Errors'],
+      \ 's' : [':VimtexStop'            , 'Stop'],
+      \ 't' : [':VimtexTocToggle'       , 'TOC toggle'],
+      \}
 call which_key#register('<Space>', "g:which_key_map")
