@@ -1,26 +1,75 @@
-" Neovim Config
-" Sean Long - August 2020
+"* GENERAL SETTINGS *"
+let mapleader=' '                               " Space as mapleader key
+
+syntax enable                                   " Enable syntax highlighting
+set enc=utf-8                                   " Display encoding
+set splitright                                  " Vertical split always to the right
+set splitbelow                                  " Horizontal split always to the bottom
+set number                                      " Display line numbers gutter
+set relativenumber                              " Display line numbers relative to current position
+set clipboard=unnamedplus                       " Use OS global clipboard
+set mouse=a                                     " Enable mouse support
+set guicursor=                                  " Force default cursor behaviour in all modes
+set ruler                                       " Show cursor position
+set hidden                                      " Keep multiple buffers open
+set nobackup                                    " Prevent back-up files, required for language servers
+set nowritebackup                               " Prevent back-up file write, required for language servers
+set updatetime=300                              " Reduce delay in screen update
+set shortmess+=c                                " Reduce 'Enter to continue' prompt on file operations
+set showmatch                                   " Show matching bracket on insertion 
+set signcolumn=yes                              " Show gutter
+
+" Searching
+set ignorecase                                  " Case insensitive searching
+set hlsearch                                    " Highlight search results
+set incsearch                                   " Incremental search
+set smartcase                                   " Overrides incsearch in capitals appear in search string
+
+" Tabbing and indents
+filetype plugin indent on
+set autoindent                                  " Automatic indenting
+set smartindent                                 " Smarter indenting
+set tabstop=4                                   " Insert 4 spaces per tab 
+set softtabstop=4                               
+set shiftwidth=4                                " Number of space characters inserted for indentation
+set expandtab                                   " Expand <tab> to spaces
+set nolinebreak
+
+set iskeyword+=                     	        " Treat dash separated words as a word text object"
+
+set nospell                                     " Disable inbuilt spelling                
+setlocal spelllang=en_au                        " Set spelling language
+
+" Terminal colour handling -------------------
+if (empty($TMUX))                               
+    if (has("nvim"))
+        let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    endif
+    if (has("termguicolors"))
+        set termguicolors
+    endif
+endif
+" -------------------------------------------
+
+"* NEOVIM PROVIDERS *"
+let g:python3_host_prog = '/home/sean/.config/nvim/nvim-py3/bin/python'
+let g:python_host_prog = '/home/sean/.config/nvim/nvim-py2/bin/python'
 
 
-" General
-source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/general/netrw.vim
+"* SOURCES *"
 
-" Plugin
-source $HOME/.config/nvim/plugins/vim-plug.vim
-source $HOME/.config/nvim/plugins/coc.vim
-source $HOME/.config/nvim/plugins/asciidoctor.vim
-source $HOME/.config/nvim/plugins/sneak.vim
-source $HOME/.config/nvim/plugins/scratch.vim
-source $HOME/.config/nvim/plugins/signify.vim
-source $HOME/.config/nvim/plugins/vimtex.vim
+" Plugins
+source $HOME/.config/nvim/vim-plug.vim
+source $HOME/.config/nvim/signify.vim
+source $HOME/.config/nvim/sneak.vim
+" Themes
+source $HOME/.config/nvim/ayu.vim
+source $HOME/.config/nvim/gruvbox.vim
+source $HOME/.config/nvim/onedark.vim
+" Airline
+source $HOME/.config/nvim/airline.vim
+" Mappings
+source $HOME/.config/nvim/mappings.vim
+source $HOME/.config/nvim/which-key.vim
 
-
-" Mapping
-source $HOME/.config/nvim/mappings/map.vim
-source $HOME/.config/nvim/mappings/which-key.vim
-
-
-" Theme
-source $HOME/.config/nvim/theme/theme.vim
-source $HOME/.config/nvim/theme/airline.vim
+colorscheme ayu

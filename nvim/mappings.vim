@@ -1,4 +1,4 @@
-" BINDINGS "
+" MAPPINGS "
 
 " Save as sudo
 cmap w!! w !sudo tee %

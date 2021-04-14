@@ -1,0 +1,3 @@
+" AYU
+
+let ayucolor="dark"
