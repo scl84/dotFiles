@@ -1,0 +1,14 @@
+#!/bin/sh
+
+rm -rf /home/sean/Downloads/test-book/book
+ssh sean@192.168.1.254 'rm -rf /share/Web/*'
+
+cd /home/sean/Downloads/test-book
+mdbook build
+
+if [ -d "/home/sean/Downloads/test-book/book" ]; then
+    scp -r /home/sean/Downloads/test-book/book/* sean@192.168.1.254:/share/Web
+else
+    echo "Unable to copy to remote"
+fi
+

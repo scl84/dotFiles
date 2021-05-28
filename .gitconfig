@@ -1,0 +1,6 @@
+[user]
+	name = Sean Long
+	email = sean.long.au@gmail.com
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+
