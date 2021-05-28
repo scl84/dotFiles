@@ -1,3 +1,0 @@
-" AYU
-
-let ayucolor="dark"
