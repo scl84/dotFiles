@@ -1,0 +1,37 @@
+GPO
+-----
+User Configuration > Administrative Templates > Windows Components > Attachment Manager
+	Do not preserve zone information in file attachments = Enable
+
+Computer Configuration > Administrative Templates > Windows Components > Cloud Content
+	Turn off Microsoft consumer experiences = Enable
+
+Computer Configuration -> Administrative Templates -> Windows Components -> Data Collection and Preview Builds
+	Set to 0
+
+
+Registry
+--------
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsStore\WindowsUpdate\AutoDownload
+If the AutoDownload option is not available, create it as a new 32-bit DWORD value and set it to 2. However, some users won’t be able to create this value.
+
+CMD Alias
+	Create a .bat or .cmd file with your DOSKEY commands.
+	Run regedit and go to HKEY_CURRENT_USER\Software\Microsoft\Command Processor
+	Add String Value entry with the name AutoRun and the full path of your .bat/.cmd file.
+
+
+Services
+--------
+Disable
+	Connected User Experiences and Telemetry
+	dmwappushsvc
+	Windows Error Reporting Service
+	Xbox stuff	
+
+
+Task Scheduler
+--------------
+Microsoft -> Windows 
+	Application Experience - Disable all
+	Customer Experience Improvement Program - Disable all
