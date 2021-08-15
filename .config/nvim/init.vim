@@ -51,6 +51,18 @@ if (empty($TMUX))
 endif
 " -------------------------------------------
 
+command! -nargs=* T vsplit | terminal <args>
+augroup neovim_terminal
+    autocmd!
+    " Enter Terminal-mode (insert) automatically
+    autocmd TermOpen * startinsert
+    " Disables number lines on terminal buffers
+    autocmd TermOpen * :set nonumber norelativenumber
+    " allows you to use Ctrl-c on terminal window
+    autocmd TermOpen * nnoremap <buffer> <C-c> i<C-c>
+augroup END
+
+
 "* NEOVIM PROVIDERS *"
 let g:python3_host_prog = '/home/sean/.config/nvim/nvim-py3/bin/python'
 
